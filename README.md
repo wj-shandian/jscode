@@ -7,3 +7,5 @@ js 手写面试题 草稿 练习
   - [create](js/object.create.js "object.create")
   - [instanceof](js/instanceof.js "instanceof")
   - [new](js/new.js "new")
+  - [throttle](js/throttle.js "throttle")
+  - [debounce](js/debounce.js "debounce")
