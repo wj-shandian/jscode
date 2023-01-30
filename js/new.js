@@ -9,7 +9,7 @@
 
 function _new(fn, ...args) {
   if (typeof fn !== "function") {
-    return new TypeError("fn should be a function type");
+    throw new TypeError("fn should be a function type");
   }
   const obj = Object.create(fn.prototype); // 步骤1 和 步骤 2
   const result = fn.call(obj, ...args); // 绑定this
