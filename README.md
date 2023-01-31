@@ -11,3 +11,7 @@ js 手写面试题 草稿 练习
   - [debounce](js/debounce.js "debounce")
   - [bind](js/bind.js "bind")
   - [柯里化](js/柯里化.js "柯里化")
+  - [flat](js/flat.js "flat")
+  - [深拷贝](js/深拷贝.js "深拷贝")
+  - [去重](js/去重.js "去重")
+  - [发布订阅](js/柯里化.js "发布订阅")
