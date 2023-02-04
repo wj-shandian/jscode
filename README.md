@@ -9,6 +9,8 @@ js 手写面试题 草稿 练习
   - [new](js/new.js "new")
   - [throttle](js/throttle.js "throttle")
   - [debounce](js/debounce.js "debounce")
+  - [call](js/call.js "call")
+  - [apply](js/apply.js "apply")
   - [bind](js/bind.js "bind")
   - [柯里化](js/柯里化.js "柯里化")
   - [flat](js/flat.js "flat")
