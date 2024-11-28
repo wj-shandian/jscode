@@ -25,7 +25,7 @@ function selectSort(arr) {
   let len = arr.length;
   let mindIndex;
   for (let i = 0; i < len - 1; i++) {
-    let mindIndex = i;
+     mindIndex = i;
     for (let j = i; j < len; j++) {
       if (arr[j] < arr[mindIndex]) {
         mindIndex = j;

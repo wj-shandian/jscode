@@ -60,3 +60,12 @@ function myInstanceof(left, right) {
     left = left.__proto__;
   }
 }
+
+function _new(fn, ...args) {
+  if (typeof fn !== "function") {
+    throw new TypeError("fn should be a function type");
+  }
+  const obj = Object.create(fn.prototype);
+  const result = fn.call(obj, ...args);
+  return result instanceof Object ? result : obj;
+}

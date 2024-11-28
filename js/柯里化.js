@@ -10,10 +10,23 @@ function curry(fn) {
     return fn(...args);
   };
 }
+
+function curry(fn){
+  return function curried(...args){
+    if(args.length < fn.length){
+      return function(){
+        return curried(...args.concat(Array.from(arguments)))
+      }
+    }
+    return fn(...args)
+  }
+}
+
 function getSum(a, b, c) {
   // 这个函数接受三个参数
   return a + b + c;
 }
+
 
 const curried = curry(getSum);
 console.log(curried(1, 2, 3)); // 那么这里也需要有三个参数 不能 只有两个 或者一个

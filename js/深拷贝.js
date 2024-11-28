@@ -55,3 +55,32 @@ let c = {
 for (let i in c) {
   console.log(Object.prototype.hasOwnProperty.call(c, "a"), i);
 }
+
+function isObject(value) {
+  return typeof value === "object" && value !== null;
+}
+
+function copy1(obj, hash = new WeakMap()) {
+  if (!isObject(obj)) return obj;
+  if (hash.has(obj)) return obj;
+
+  const cloneObj = Array.isArray(obj) ? [] : {};
+  hash.set(obj, cloneObj);
+
+  for (let key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      if (isObject(obj[key])) {
+        cloneObj[key] = copy1(obj[key], hash);
+      } else {
+        cloneObj[key] = obj[key];
+      }
+    }
+  }
+  return cloneObj;
+}
+
+// function new(fn,...args){
+//   let obj = Object.create(fn.prototype);
+//   let result = fn.call(obj,...args)
+//   return result instanceof Object ? result : obj;
+// }
